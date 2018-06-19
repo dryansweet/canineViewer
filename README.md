@@ -4,7 +4,7 @@
 
 Canine Viewer is a simple application created with Angular CLI and Node/Express that allows user to search a breed of dog and view a picture of the breed.
  
-This application utitlizes Dog API, an open open API for dog pictures.
+This application utitlizes Dog API, an open API for finding dog pictures.
 
 https://dog.ceo/dog-api/
 
