@@ -1,0 +1,23 @@
+{
+  "name": "canine_viewer_server",
+  "version": "1.0.0",
+  "description": "openApi AngCli/Node Express app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dryansweet/canineViewer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dryansweet/canineViewer/issues"
+  },
+  "homepage": "https://github.com/dryansweet/canineViewer#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
