@@ -30,3 +30,7 @@ Files of interest
 
 - src/app/*  *dataService in modules*
 - src/styles/*
+
+### Known vulnerability
+
+https://github.com/angular/angular-cli/issues/10480
