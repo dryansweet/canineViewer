@@ -24,7 +24,7 @@ After dependencies have installed run *npm start*
 Navigate your browser to *localhost:3000*
 
 
-##Frontend Notes
+## Frontend Notes
 
 Files of interest
 
