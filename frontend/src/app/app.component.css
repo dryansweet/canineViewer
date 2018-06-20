@@ -1,0 +1,12 @@
+.space {
+   margin-top: 10px;
+}
+
+.left-space {
+   margin-left: 20px;
+}
+
+.image-box {
+  max-width: 50%;
+  max-height: 50%
+}
