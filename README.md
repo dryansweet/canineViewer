@@ -24,3 +24,9 @@ After dependencies have installed run *npm start*
 Navigate your browser to *localhost:3000*
 
 
+##Frontend Notes
+
+Files of interest
+
+- src/app/*  *dataService in modules*
+- src/styles/*
