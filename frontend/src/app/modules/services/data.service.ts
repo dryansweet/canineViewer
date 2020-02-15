@@ -15,7 +15,7 @@ export class DataService {
     return new Promise(resolve => {
       this.http
         .get("https://dog.ceo/api/breeds/list/all")
-        .subscribe(res => resolve(res.json().message), err => console.log(err));
+        .subscribe(res => resolve(res.json().message), err => this.errorHandler(err));
     });
   }
 
@@ -42,17 +42,17 @@ export class DataService {
              let max = res.json().message.length
              let num = Math.floor(Math.random()*(max-1)+0)
              resolve(res.json().message[num])
-          }, err => console.log(err));
+          }, err => this.errorHandler(err));
       }
     });
   }
 
-  errorHandler(err){
+  errorHandler(err: Error){
       // This is would be an ideal spot to run an analytics and gracefully handle failures. 
       // My best guess as to why you're seeing this is that 
       // 1) the OpenAPI is down 
       // 2) Your internet filter isn't allowing it or 
       // 3) You're not connected to the internet
-      console.log(err) 
+      console.error(err) 
   }
 }

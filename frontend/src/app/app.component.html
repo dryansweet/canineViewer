@@ -1,33 +1,41 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+  <h1>{{ title }}!</h1>
 </div>
 <div style="text-align:center">
-
-
-  <p-autoComplete [(ngModel)]=dog (completeMethod)='filterDogs($event)' field="breed" [size]=30 [minLength]=1 placeholder="Enter a dog Breed"
-    tooltip='Not sure what to look for? Try "Shiba"'></p-autoComplete>
-  <button type="button" class="btn btn-primary left-space" (click)=getPic() tooltip="Gun shy? Click me for a random dog">
-    Random
-  </button>
-  <br>
-
-
-  <div *ngFor="let dog of filteredDogs">
-    <button type="button" class="btn space" (click)=getPic(dog)>{{dog}}</button>
+  <div>
+    <p-autoComplete
+      [(ngModel)]="dog"
+      (completeMethod)="filterDogs($event)"
+      field="breed"
+      [size]="30"
+      [minLength]="1"
+      placeholder="Enter a dog Breed"
+      tooltip='Not sure what to look for? Try "Shiba"'
+    ></p-autoComplete>
+    <br />
+    <h4>or</h4>
+    <button
+      type="button"
+      class="btn btn-primary left-space"
+      (click)="getPic()"
+      tooltip="Gun shy? Click me for a random dog"
+    >
+      Fetch Random
+    </button>
   </div>
-  <!-- <div *ngIf=(errorMessage !== "")>
-    {{errorMessage}}
-  </div> -->
-  <div *ngIf="errorMessage" >
-    Ooops something went wrong....Please verify that you are able to visit<br> 
-      <a href="https://dog.ceo/dog-api/documentation/breed">Dog API</a>
+  <br />
+  <div *ngFor="let dog of filteredDogs">
+    <button type="button" class="btn space" (click)="getPic(dog)">
+      {{ dog }}
+    </button>
+  </div>
+  <div *ngIf="errorMessage">
+    Ooops something went wrong....Please verify that you are able to visit<br />
+    <a href="https://dog.ceo/dog-api/documentation/breed">Dog API</a>
   </div>
   <div>
-    {{imageTitle}}<br>
-    <img [src]='image'>
+    {{ imageTitle }}<br />
+    <img [src]="image" />
   </div>
 </div>
-<!-- <p-dropdown [options]="cities" [(ngModel)]="selectedCity"></p-dropdown> -->

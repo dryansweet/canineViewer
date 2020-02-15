@@ -28,7 +28,8 @@ export class AppComponent {
   }
 
   getDogs() {
-    this.data.getListofDogs().then(data => {
+    this.data.getListofDogs().then((data: any[]) => {
+      console.log(data)
       for (let x in data) {
         if (data[x].length <= 1) this.dogs.push(x);
         else {
@@ -42,7 +43,7 @@ export class AppComponent {
     });
   }
 
-  filterDogs(event) {
+  filterDogs(event: string) {
     this.filteredDogs = [];
     for (let i = 0; i < this.dogs.length; i++) {
       let dog1 = this.dogs[i];
